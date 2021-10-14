@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <style>
+      @keyframes navup {
+        from {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .img_bookmark,
+      .img_arrow,
+      .img_account,
+      .img_briefcase {
+        width: 40px;
+        height: 40px;
+      }
+      header {
+        text-align: center;
+        margin-top: 60px;
+      }
+      header .profile {
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 1),
+          0 12px 24px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      header .thumb_wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 40px;
+        animation: slidedown2 1s;
+        animation-fill-mode: both;
+      }
+      header .badge {
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 12px 0 rgba(100, 0, 0, 1);
+        animation: slidedown2 1s;
+        animation-fill-mode: both;
+        animation-delay: 0.2s;
+      }
+      header .greeting {
+        margin-bottom: 40px;
+      }
+      header .mail {
+        padding: 8px 22px 10px 22px;
+        border: 0.5px solid rgba(0, 0, 0, 0.05);
+        display: inline-block;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        margin-top: 30px;
+        animation: navup 1s;
+        animation-fill-mode: both;
+      }
+      .list {
+        margin-top: 30px;
+      }
+      .list .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+      }
+      .list .item img {
+        padding: 30px 22px;
+      }
+      .list .item .left {
+        display: flex;
+        align-items: center;
+      }
+      .list .item .left .name {
+        margin-left: 6px;
+      }
+      .list .item .right {
+        opacity: 0.5;
+      }
+      .list .item .right img {
+        padding-right: 15px;
+      }
+      .modal-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-inner {
+        width: 900px;
+        background-color: #485861;
+        border-radius: 12px;
+        box-sizing: border-box;
+        overflow: hidden;
+        animation: navup 0.5s;
+        animation-fill-mode: both;
+      }
+      .modal-inner .thumb {
+        height: 400px;
+        background-color: white;
+        background-image: url("./mymodal.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .modal-inner .title {
+        font-size: 35px;
+        padding-bottom: 20px;
+      }
+      .bottom-info .description {
+        line-height: 40px;
+        font-size: 20px;
+      }
+      .bottom-info {
+        height: 300px;
+        position: relative;
+        padding: 20px;
+      }
+      .bottom-info button {
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 230, 207, 0.28);
+        border-radius: 4px;
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+      }
+      .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation: fadein 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="thumb_wrapper">
+        <img class="profile" src="./mypage/profile.jpg" />
+        <div class="badge">7</div>
+      </div>
+      <div class="text-area">
+        <h2 class="greeting">Hi, Everyone!</h2>
+        <h3 class="desc">
+          당장은 떠날 수 없지만 우리 언젠가는 여행을 가지 않겠어요? <br />
+          여행을 떠나고 싶은 사람들은 자유롭게 개인 페이지를 작성해보아요.
+        </h3>
+      </div>
+      <div class="mail">
+        <a href="mailto:tksxkrjs123@gmail.com">tksxkrjs123@gmail.com</a>
+      </div>
+    </header>
+    <ul class="list">
+      <li class="item mouse_effect">
+        <div class="left">
+          <img class="img_bookmark" src="./mypage/bookmark.svg" />
+          <div class="name">Bookmark</div>
+        </div>
+        <div class="right">
+          <img class="img_arrow" src="./mypage/right-arrow.svg" />
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="left">
+          <img class="img_account" src="./mypage/account.svg" />
+          <div class="name">Account info</div>
+        </div>
+        <div class="right">
+          <img class="img_arrow" src="./mypage/right-arrow.svg" />
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="left">
+          <img class="img_briefcase" src="./mypage/briefcase.svg" />
+          <div class="name">Business</div>
+        </div>
+        <div class="right">
+          <img class="img_arrow" src="./mypage/right-arrow.svg" />
+        </div>
+      </li>
+    </ul>
+
+    <nav class="gnb">
+      <a href="./index.html" class="index mouse_effect"
+        ><img src="./navi/book.png"
+      /></a>
+      <a href="./Malaga.html" class="Malaga mouse_effect"
+        ><img src="./navi/Malaga.png"
+      /></a>
+      <a href="./Barcelona.html" class="Barcelona mouse_effect"
+        ><img src="./navi/Barcelona.png"
+      /></a>
+      <a href="./Sevilla.html" class="Sevilla mouse_effect"
+        ><img src="./navi/Sevilla.png"
+      /></a>
+      <a href="./Granada.html" class="Granada mouse_effect"
+        ><img src="./navi/Granada.png"
+      /></a>
+      <a href="./Madrid.html" class="Madrid mouse_effect"
+        ><img src="./navi/Madrid.png"
+      /></a>
+      <a href="./Lisbon.html" class="Lisbon mouse_effect"
+        ><img src="./navi/Lisbon.png"
+      /></a>
+      <a href="./Porto.html" class="Porto mouse_effect"
+        ><img src="./navi/Porto.png"
+      /></a>
+      <a href="./like.html" class="like mouse_effect"
+        ><img src="./navi/heart.png"
+      /></a>
+      <a href="./mypage.html" class="mypage mouse_effect active"
+        ><img src="./navi/man.png"
+      /></a>
+    </nav>
+    <div class="overlay"></div>
+    <div class="modal-wrapper">
+      <div class="modal-inner">
+        <div class="thumb"></div>
+        <div class="bottom-info">
+          <div class="title">여행을 좋아하는 여러분에게</div>
+          <p class="description">
+            안녕하세요 여러분. 저는 여행을 좋아하는 유윤호라고 합니다.
+            <br />짧은 인생에서 새로운 곳으로 여행을 떠나는 것은 매우 중요한
+            일입니다.<br />
+            반복적인 일상에서의 무기력에서 벗어나 코로나가 끝나면 각자 여행을
+            원하던 곳으로 떠납시다. <br />그 곳에서 새로운 인생의 목표를 찾을 수
+            있을지 아무도 모르잖아요?
+          </p>
+          <a href="./mypage.html"><button>Close</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

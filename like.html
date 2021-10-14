@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./animation.css"
+    />
+    <style>
+      .search {
+        margin: 30px 35px 30px 35px;
+        position: relative;
+      }
+      .search form {
+        display: flex;
+      }
+
+      .search .search_field {
+        width: 100%;
+        flex-shrink: 0;
+        animation: slidedown 1s;
+        animation-fill-mode: both;
+      }
+      .search .search_field:focus {
+        flex-shrink: initial;
+      }
+      .search .search_field:focus ~ .cancel_button {
+        opacity: 1;
+      }
+      .search .cancel_button {
+        flex-shrink: 0;
+        margin-left: 25px;
+        transition: 0.5s;
+        opacity: 0;
+      }
+      .search .search_icon {
+        width: 25px;
+        height: 25px;
+        opacity: 0.8;
+        position: absolute;
+        left: 15px;
+        top: 13px;
+        animation: slidedown 1s;
+        animation-fill-mode: both;
+      }
+      .text-area {
+        margin: 24px;
+        margin-top: 120px;
+        padding-bottom: 40px;
+      }
+      .text-area h1 {
+        font-size: 55px;
+      }
+      .text-area .desc {
+        margin-top: 30px;
+        line-height: 1.5;
+        font-size: 20px;
+      }
+      .list {
+        font-size: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 500px;
+        column-gap: 10px;
+        row-gap: 10px;
+        padding: 20px;
+      }
+      .list .item {
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+      }
+      .list .item:nth-child(1) {
+        background-image: url("./like1.jpg");
+      }
+      .list .item:nth-child(2) {
+        background-image: url("./like2.jpg");
+      }
+      .list .item:nth-child(3) {
+        background-image: url("./like3.jpg");
+      }
+      .list .item:nth-child(4) {
+        background-image: url("./like4.jpg");
+      }
+      .list .item:nth-child(5) {
+        background-image: url("./like5.jpg");
+      }
+      .list .item:nth-child(6) {
+        background-image: url("./like6.jpg");
+      }
+      .list .item:nth-child(7) {
+        background-image: url("./like7.jpg");
+      }
+      .list .item:nth-child(8) {
+        background-image: url("./like8.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <!--검색 영역-->
+    <header class="search">
+      <form>
+        <input placeholder="Search" type="text" class="search_field" />
+        <button onclick="alert('Yor are doing great!')" class="cancel_button">
+          취소
+        </button>
+      </form>
+      <img class="search_icon" src="./search.svg" />
+    </header>
+    <div class="text-area">
+      <h1 class="stagger-item">Where?</h1>
+      <div class="desc stagger-item">
+        유튜브, SNS, TV프로그램을 통해 알려진 세계 여러 도시 중 가보고 싶었던
+        곳은 어디인가?<br />
+        미래에 방문해보고 싶은 여행지를 검색하여 구경해보자.
+      </div>
+    </div>
+
+    <ul class="list">
+      <li class="item mouse_scale"></li>
+      <li class="item mouse_scale"></li>
+      <li class="item mouse_scale"></li>
+      <li class="item mouse_scale"></li>
+
+      <li class="item mouse_scale"></li>
+      <li class="item mouse_scale"></li>
+      <li class="item mouse_scale"></li>
+      <li class="item mouse_scale"></li>
+    </ul>
+    <nav class="gnb">
+      <a href="./index.html" class="index mouse_effect"
+        ><img src="./book.png"
+      /></a>
+      <a href="./Malaga.html" class="Malaga mouse_effect"
+        ><img src="./Malaga.png"
+      /></a>
+      <a href="./Barcelona.html" class="Barcelona mouse_effect"
+        ><img src="./Barcelona.png"
+      /></a>
+      <a href="./Sevilla.html" class="Sevilla mouse_effect"
+        ><img src="./Sevilla.png"
+      /></a>
+      <a href="./Granada.html" class="Granada mouse_effect"
+        ><img src="./Granada.png"
+      /></a>
+      <a href="./Madrid.html" class="Madrid mouse_effect"
+        ><img src="./Madrid.png"
+      /></a>
+      <a href="./Lisbon.html" class="Lisbon mouse_effect"
+        ><img src="./Lisbon.png"
+      /></a>
+      <a href="./Porto.html" class="Porto mouse_effect"
+        ><img src="./Porto.png"
+      /></a>
+      <a href="./like.html" class="like mouse_effect active"
+        ><img src="./heart.png"
+      /></a>
+      <a href="./mypage.html" class="mypage mouse_effect"
+        ><img src="./man.png"
+      /></a>
+    </nav>
+  </body>
+</html>

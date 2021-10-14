@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./animation.css"
+    />
+    <style>
+      .featured {
+        height: 900px;
+        background-color: black;
+        position: relative;
+        background-image: url("./Barcelona1.jpg");
+        background-size: cover;
+      }
+      .featured .title {
+        margin-bottom: 12px;
+        font-size: 80px;
+        margin-top: 0;
+      }
+      .count {
+        position: absolute;
+        top: 30px;
+        right: 26px;
+      }
+      .text-area {
+        position: absolute;
+        bottom: 36px;
+        left: 24px;
+      }
+      sup {
+        font-size: 30px;
+      }
+      .swiper {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding: 20px;
+      }
+      .swiper li {
+        width: 450px;
+        height: 225px;
+        background-size: cover;
+        background-position: center;
+        display: inline-block;
+        border-radius: 15px;
+        margin-right: 20px;
+      }
+      .swiper li:nth-child(1) {
+        background-image: url("./Barcelona2.jpg");
+      }
+      .swiper li:nth-child(2) {
+        background-image: url("./Barcelona3.jpg");
+      }
+      .swiper li:nth-child(3) {
+        background-image: url("./Barcelona4.jpg");
+      }
+      .swiper li:nth-child(4) {
+        background-image: url("./Barcelona5.jpg");
+      }
+      .swiper li:nth-child(5) {
+        background-image: url("./Barcelona6.jpg");
+      }
+      .swiper li:nth-child(6) {
+        background-image: url("./Barcelona7.jpg");
+      }
+      .swiper li:nth-child(7) {
+        background-image: url("./Barcelona8.jpg");
+      }
+      .swiper li:nth-child(8) {
+        background-image: url("./Barcelona9.jpg");
+      }
+      .swiper li:nth-child(9) {
+        background-image: url("./Barcelona10.jpg");
+      }
+
+      .item {
+        padding: 17px 24px 20px 24px;
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        position: relative;
+      }
+
+      /*리스트 시작*/
+      .item .num {
+        width: 40px;
+        height: 40px;
+        background-color: #ffe6cf;
+        color: #485762;
+        border-radius: 50%;
+        padding: 5px 15px;
+        box-sizing: border-box;
+        margin-right: 20px;
+        font-size: 20px;
+      }
+      /*리스트 설명*/
+      .item .infos {
+        font-weight: normal;
+      }
+      .item .text-title {
+        font-size: 35px;
+      }
+      .item .desc {
+        font-size: 20px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="featured">
+      <h1 class="count">2</h1>
+      <div class="text-area">
+        <h1 class="title stagger-item">Barcelona, Spain</h1>
+        <p class="stagger-item">
+          스페인 축구 성지, 바르셀로나<br />열정적인 그 곳을 다시 가보자.
+        </p>
+      </div>
+    </div>
+
+    <ul class="swiper">
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+    </ul>
+
+    <ul class="list">
+      <li class="item mouse_effect">
+        <div class="num">1</div>
+        <div class="infos">
+          <div class="text-title">
+            가우디 미완의 걸작, 사그리다 파밀리아 성당
+          </div>
+          <div class="desc">
+            천재 가우디가 완성하지 못한 걸작인 사그리다 파밀리아 성당을
+            되돌아보자.
+          </div>
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="num">2</div>
+        <div class="infos">
+          <div class="text-title">바르셀로나 FC의 홈구장, 캄프 누</div>
+          <div class="desc">
+            엄청난 역사를 간직하고 있는 바르셀로나 FC의 홈구장인 캄프 누. 메시가
+            매주 입장하던 복도를 다시 기억하자.
+          </div>
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="num">3</div>
+        <div class="infos">
+          <div class="text-title">
+            유럽 여행 마무리와 함께한 바르셀로나의 야경
+          </div>
+          <div class="desc">
+            3주간의 여행을 마무리하면서 감상한 바르셀로나의 야경. 멀리서도
+            보이는 사그리다 파밀리아 성당은 너무 아름답다.
+          </div>
+        </div>
+      </li>
+    </ul>
+    <nav class="gnb">
+      <a href="./index.html" class="index mouse_effect"
+        ><img src="./book.png"
+      /></a>
+      <a href="./Malaga.html" class="Malaga mouse_effect"
+        ><img src="./Malaga.png"
+      /></a>
+      <a href="./Barcelona.html" class="Barcelona mouse_effect active"
+        ><img src="./Barcelona.png"
+      /></a>
+      <a href="./Sevilla.html" class="Sevilla mouse_effect"
+        ><img src="./Sevilla.png"
+      /></a>
+      <a href="./Granada.html" class="Granada mouse_effect"
+        ><img src="./Granada.png"
+      /></a>
+      <a href="./Madrid.html" class="Madrid mouse_effect"
+        ><img src="./Madrid.png"
+      /></a>
+      <a href="./Lisbon.html" class="Lisbon mouse_effect"
+        ><img src="./Lisbon.png"
+      /></a>
+      <a href="./Porto.html" class="Porto mouse_effect"
+        ><img src="./Porto.png"
+      /></a>
+      <a href="./like.html" class="like mouse_effect"
+        ><img src="./heart.png"
+      /></a>
+      <a href="./mypage.html" class="mypage mouse_effect"
+        ><img src="./man.png"
+      /></a>
+    </nav>
+  </body>
+</html>

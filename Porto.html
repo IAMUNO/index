@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./animation.css"
+    />
+    <style>
+      .featured {
+        height: 900px;
+        background-color: black;
+        position: relative;
+        background-image: url("./Porto1.jpg");
+        background-size: cover;
+        background-position: bottom;
+      }
+      .featured .title {
+        margin-bottom: 12px;
+        font-size: 80px;
+        margin-top: 0;
+      }
+      .count {
+        position: absolute;
+        top: 30px;
+        right: 26px;
+      }
+      .text-area {
+        position: absolute;
+        bottom: 36px;
+        left: 24px;
+      }
+      sup {
+        font-size: 30px;
+      }
+      .swiper {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding: 20px;
+      }
+      .swiper li {
+        width: 450px;
+        height: 225px;
+        background-size: cover;
+        background-position: center;
+        display: inline-block;
+        border-radius: 15px;
+        margin-right: 20px;
+      }
+      .swiper li:nth-child(1) {
+        background-image: url("./Porto2.jpg");
+      }
+      .swiper li:nth-child(2) {
+        background-image: url("./Porto3.jpg");
+      }
+      .swiper li:nth-child(3) {
+        background-image: url("./Porto4.jpg");
+      }
+      .swiper li:nth-child(4) {
+        background-image: url("./Porto5.jpg");
+      }
+      .swiper li:nth-child(5) {
+        background-image: url("./Porto6.jpg");
+      }
+      .swiper li:nth-child(6) {
+        background-image: url("./Porto7.jpg");
+      }
+      .swiper li:nth-child(7) {
+        background-image: url("./Porto8.jpg");
+      }
+      .swiper li:nth-child(8) {
+        background-image: url("./Porto9.jpg");
+      }
+      .item {
+        padding: 17px 24px 20px 24px;
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        position: relative;
+      }
+
+      /*리스트 시작*/
+      .item .num {
+        width: 40px;
+        height: 40px;
+        background-color: #ffe6cf;
+        color: #485762;
+        border-radius: 50%;
+        padding: 5px 15px;
+        box-sizing: border-box;
+        margin-right: 20px;
+        font-size: 20px;
+      }
+      /*리스트 설명*/
+      .item .infos {
+        font-weight: normal;
+      }
+      .item .text-title {
+        font-size: 35px;
+      }
+      .item .desc {
+        font-size: 20px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="featured">
+      <h1 class="count">7</h1>
+      <div class="text-area">
+        <h1 class="title stagger-item">Porto, Portugal</h1>
+        <p class="stagger-item">
+          유럽 여행 중 모든 것이 완벽했던 도시, 포르투. 분위기며, 치안이며,
+          음식이며 경관이며, 정말 행복했던 포르투. <br />
+          꼭 다시 방문할 것이라 다짐을 또 한다.
+        </p>
+      </div>
+    </div>
+
+    <ul class="swiper">
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+    </ul>
+
+    <ul class="list">
+      <li class="item mouse_effect">
+        <div class="num">1</div>
+        <div class="infos">
+          <div class="text-title">2층 숙소, 그리고 신라면</div>
+          <div class="desc">
+            저스틴 비버를 닮은 커플, 2층 숙소, 그리고 신라면.
+          </div>
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="num">2</div>
+        <div class="infos">
+          <div class="text-title">가장 아름다웠던 모로 공원에서의 석양</div>
+          <div class="desc">
+            포르투를 방문하는 목적은 모로 공원에서의 석양이 전부라고 할 정도로
+            아름다웠다. 평화롭고 여유로웠던 그 장소를 꼭 다시 방문해보자.
+          </div>
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="num">3</div>
+        <div class="infos">
+          <div class="text-title">공원에 누워 즐겨보자. 시에스타.</div>
+          <div class="desc">
+            그늘진 공원에 누워 시에스타를 겪어보고, 노란색 1번 트램을 타고
+            바다를 보러가고, 이게 진정한 여행이지!
+          </div>
+        </div>
+      </li>
+    </ul>
+    <nav class="gnb">
+      <a href="./index.html" class="index mouse_effect"
+        ><img src="./book.png"
+      /></a>
+      <a href="./Malaga.html" class="Malaga mouse_effect"
+        ><img src="./Malaga.png"
+      /></a>
+      <a href="./Barcelona.html" class="Barcelona mouse_effect"
+        ><img src="./Barcelona.png"
+      /></a>
+      <a href="./Sevilla.html" class="Sevilla mouse_effect"
+        ><img src="./Sevilla.png"
+      /></a>
+      <a href="./Granada.html" class="Granada mouse_effect"
+        ><img src="./Granada.png"
+      /></a>
+      <a href="./Madrid.html" class="Madrid mouse_effect"
+        ><img src="./Madrid.png"
+      /></a>
+      <a href="./Lisbon.html" class="Lisbon mouse_effect"
+        ><img src="./Lisbon.png"
+      /></a>
+      <a href="./Porto.html" class="Porto mouse_effect active"
+        ><img src="./Porto.png"
+      /></a>
+      <a href="./like.html" class="like mouse_effect"
+        ><img src="./heart.png"
+      /></a>
+      <a href="./mypage.html" class="mypage mouse_effect"
+        ><img src="./man.png"
+      /></a>
+    </nav>
+  </body>
+</html>

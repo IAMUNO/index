@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./animation.css"
+    />
+
+    <style>
+      .back-image {
+        background-color: navy;
+        height: 50px;
+        width: 100%;
+        position: relative;
+      }
+      .back-image2 {
+        background-color: navy;
+        opacity: 0.2;
+        height: 50px;
+        width: 100%;
+        position: relative;
+      }
+      .text-area {
+        margin-top: 100px;
+        margin-left: 100px;
+      }
+      .text-area h1 {
+        margin-bottom: 22px;
+      }
+      .text-area .desc {
+        font-size: 30px;
+        line-height: 4;
+      }
+      .volume {
+        margin-bottom: 70px;
+        font-size: 40px;
+        font-weight: normal;
+      }
+      .title {
+        font-size: 100px;
+      }
+      .text-title {
+        font-size: 70px;
+      }
+      p {
+        font-size: 40px;
+        font-weight: normal;
+      }
+      #circle-wrapper {
+        position: relative;
+        margin-left: 1200px;
+        margin-top: 50px;
+      }
+      .circle {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        position: absolute;
+        animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        animation-fill-mode: both;
+        animation: circleshow 2s;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      .circle:nth-child(1) {
+        background-color: darkgoldenrod;
+        top: 0;
+        transition: 1s;
+      }
+
+      .circle:nth-child(2) {
+        background-color: #ffc000;
+        left: 120px;
+        top: 0;
+        transition: 1s;
+        animation-delay: 0.1s;
+      }
+
+      .circle:nth-child(3) {
+        background-color: #fedd15;
+        left: 250px;
+        transition: 1s;
+        top: 0;
+        animation-delay: 0.2s;
+      }
+
+      #badge {
+        background-color: #ffc000;
+        width: 80px;
+        height: 49px;
+        color: #485861;
+        margin-left: 24px;
+        padding-left: 20px;
+        padding-top: 14px;
+        padding-bottom: 5px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 24px;
+        font-weight: bold;
+        animation: slidedown 1s;
+        animation-fill-mode: both;
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="back-image"></div>
+    <div class="back-image2"></div>
+
+    <div class="text-area">
+      <h1>
+        <div class="volume stagger-item">Vol. 1</div>
+        <div class="title">
+          <div class="stagger-item">Learning</div>
+          <div class="stagger-item">How to use CSS</div>
+          <div class="desc stagger-item">CSS를 사용해 여행 기록을 남겨보자</div>
+        </div>
+      </h1>
+    </div>
+    <div id="circle-wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div id="badge">Ch. 1</div>
+    <nav class="gnb">
+      <a href="./index.html" class="index mouse_effect active"
+        ><img src="./book.png"
+      /></a>
+      <a href="./Malaga.html" class="Malaga mouse_effect"
+        ><img src="./Malaga.png"
+      /></a>
+      <a href="./Barcelona.html" class="Barcelona mouse_effect"
+        ><img src="./Barcelona.png"
+      /></a>
+      <a href="./Sevilla.html" class="Sevilla mouse_effect"
+        ><img src="./Sevilla.png"
+      /></a>
+      <a href="./Granada.html" class="Granada mouse_effect"
+        ><img src="./Granada.png"
+      /></a>
+      <a href="./Madrid.html" class="Madrid mouse_effect"
+        ><img src="./Madrid.png"
+      /></a>
+      <a href="./Lisbon.html" class="Lisbon mouse_effect"
+        ><img src="./Lisbon.png"
+      /></a>
+      <a href="./Porto.html" class="Porto mouse_effect"
+        ><img src="./Porto.png"
+      /></a>
+      <a href="./like.html" class="like mouse_effect"
+        ><img src="./heart.png"
+      /></a>
+      <a href="./mypage.html" class="mypage mouse_effect"
+        ><img src="./man.png"
+      /></a>
+    </nav>
+  </body>
+</html>

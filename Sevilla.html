@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./animation.css"
+    />
+    <style>
+      .featured {
+        height: 900px;
+        background-color: black;
+        position: relative;
+        background-image: url("./Sevila1.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .featured .title {
+        margin-bottom: 12px;
+        font-size: 80px;
+        margin-top: 0;
+      }
+      .count {
+        position: absolute;
+        top: 30px;
+        right: 26px;
+      }
+      .text-area {
+        position: absolute;
+        bottom: 36px;
+        left: 24px;
+      }
+      sup {
+        font-size: 30px;
+      }
+      .swiper {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding: 20px;
+      }
+      .swiper li {
+        width: 450px;
+        height: 225px;
+        background-size: cover;
+        background-position: center;
+        display: inline-block;
+        border-radius: 15px;
+        margin-right: 20px;
+      }
+      .swiper li:nth-child(1) {
+        background-image: url("./Sevila2.jpg");
+      }
+      .swiper li:nth-child(2) {
+        background-image: url("./Sevila3.jpg");
+      }
+      .swiper li:nth-child(3) {
+        background-image: url("./Sevila4.jpg");
+      }
+      .swiper li:nth-child(4) {
+        background-image: url("./Sevila5.jpg");
+      }
+
+      .swiper li:nth-child(5) {
+        background-image: url("./Sevila6.jpg");
+      }
+
+      .swiper li:nth-child(6) {
+        background-image: url("./Sevila7.jpg");
+      }
+      .swiper li:nth-child(7) {
+        background-image: url("./Sevila8.jpg");
+      }
+      .item {
+        padding: 17px 24px 20px 24px;
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        position: relative;
+      }
+
+      /*리스트 시작*/
+      .item .num {
+        width: 40px;
+        height: 40px;
+        background-color: #ffe6cf;
+        color: #485762;
+        border-radius: 50%;
+        padding: 5px 15px;
+        box-sizing: border-box;
+        margin-right: 20px;
+        font-size: 20px;
+      }
+      /*리스트 설명*/
+      .item .infos {
+        font-weight: normal;
+      }
+      .item .text-title {
+        font-size: 35px;
+      }
+      .item .desc {
+        font-size: 20px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="featured">
+      <h1 class="count">3</h1>
+      <div class="text-area">
+        <h1 class="title stagger-item">Sevilla, Spain</h1>
+        <p class="stagger-item">
+          한적하고 평화로웠던, 세비야 <br />그 평화로운 추억을 맛보자.
+        </p>
+      </div>
+    </div>
+
+    <ul class="swiper">
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+      <li class="mouse_scale"></li>
+    </ul>
+
+    <ul class="list">
+      <li class="item mouse_effect">
+        <div class="num">1</div>
+        <div class="infos">
+          <div class="text-title">세비야의 치명적이었던 무더위</div>
+          <div class="desc">
+            세비야에 도착하고 가장 충격적이었던 더위. 엄청 더웠다 진짜.
+          </div>
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="num">2</div>
+        <div class="infos">
+          <div class="text-title">길거리 음식과 버스킹 공연</div>
+          <div class="desc">
+            무더위 속에서 계속 눈에 들어왔떤 젤라또, 그리고 지나가는 사람들을
+            놀래키던 버스킹 공연.
+          </div>
+        </div>
+      </li>
+      <li class="item mouse_effect">
+        <div class="num">3</div>
+        <div class="infos">
+          <div class="text-title">낮과는 전혀 판이었던 세비야의 야경</div>
+          <div class="desc">
+            세련된 건축물 위에서 목격한 세비야의 야경, 그리고 맥주 한모금을
+            추억해보자.
+          </div>
+        </div>
+      </li>
+    </ul>
+    <nav class="gnb">
+      <a href="./index.html" class="index mouse_effect"
+        ><img src="./book.png"
+      /></a>
+      <a href="./Malaga.html" class="Malaga mouse_effect"
+        ><img src="./Malaga.png"
+      /></a>
+      <a href="./Barcelona.html" class="Barcelona mouse_effect"
+        ><img src="./Barcelona.png"
+      /></a>
+      <a href="./Sevilla.html" class="Sevilla mouse_effect active"
+        ><img src="./Sevilla.png"
+      /></a>
+      <a href="./Granada.html" class="Granada mouse_effect"
+        ><img src="./Granada.png"
+      /></a>
+      <a href="./Madrid.html" class="Madrid mouse_effect"
+        ><img src="./Madrid.png"
+      /></a>
+      <a href="./Lisbon.html" class="Lisbon mouse_effect"
+        ><img src="./Lisbon.png"
+      /></a>
+      <a href="./Porto.html" class="Porto mouse_effect"
+        ><img src="./Porto.png"
+      /></a>
+      <a href="./like.html" class="like mouse_effect"
+        ><img src="./heart.png"
+      /></a>
+      <a href="./mypage.html" class="mypage mouse_effect"
+        ><img src="./man.png"
+      /></a>
+    </nav>
+  </body>
+</html>
